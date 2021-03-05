@@ -74,17 +74,7 @@ export function DrawerContent(props){
                             label="Home"
                             onPress={() => {props.navigation.navigate('Home')}}
                         />
-                        <DrawerItem 
-                            icon={({color, size}) => (
-                                <Icon 
-                                name="account-outline" 
-                                color={color}
-                                size={size}
-                                />
-                            )}
-                            label="Profile"
-                            onPress={() => {props.navigation.navigate('Profile')}}
-                        />
+                        
                         <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
@@ -110,6 +100,17 @@ export function DrawerContent(props){
                         <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
+                                name="account-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="Profile"
+                            onPress={() => {props.navigation.navigate('Profile')}}
+                        />
+                        {/* <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
                                 name="cog-outline" 
                                 color={color}
                                 size={size}
@@ -117,7 +118,7 @@ export function DrawerContent(props){
                             )}
                             label="Settings"
                             onPress={() => {props.navigation.navigate('Profile')}}
-                        />
+                        /> */}
                     </Drawer.Section>
                     {/* <Drawer.Section title="Preferences">
                         <TouchableRipple onPress={() => {toggleTheme()}}>

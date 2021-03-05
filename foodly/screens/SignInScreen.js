@@ -74,9 +74,9 @@ const SignInScreen = ({navigation}) => {
             secureTextEntry: !data.secureTextEntry
         });
     }
-    const loginHandle = (username, password) => {
-        signIn(username, password);
-    }
+    // const loginHandle = (username, password) => {
+    //     signIn(username, password);
+    // }
 
     const handleValidUser = (val) => {
         if( val.trim().length >= 4 ) {
@@ -92,11 +92,12 @@ const SignInScreen = ({navigation}) => {
         }
     }
 
-    const loginHandlea = (userName, password) => {
+    const loginHandle = (userName, password) => {
 
-        const foundUser = Users.filter( item => {
-            return userName == item.username && password == item.password;
-        } );
+        // const foundUser = Users.filter( item => {
+        //     return userName == item.username && password == item.password;
+        // } );
+        
 
         if ( data.username.length == 0 || data.password.length == 0 ) {
             Alert.alert('Wrong Input!', 'Username or password field cannot be empty.', [
@@ -104,19 +105,36 @@ const SignInScreen = ({navigation}) => {
             ]);
             return;
         }
-
-        if ( foundUser.length == 0 ) {
-            Alert.alert('Invalid User!', 'Username or password is incorrect.', [
+        if (data.password.length < 8 ) {
+            Alert.alert('Password Length!', 'Passwords should be at least 8 characters long.', [
                 {text: 'Okay'}
             ]);
             return;
         }
+        if (data.username.length < 4 ) {
+            Alert.alert('Username/Email Length!', 'Username/Email should be at least 4 characters long.', [
+                {text: 'Okay'}
+            ]);
+            return;
+        }
+        
+        // console.log(userName);
+        // console.log(password);
+
+        signIn(userName, password);
+
+        // if ( foundUser.length == 0 ) {
+        //     Alert.alert('Invalid User!', 'Username or password is incorrect.', [
+        //         {text: 'Okay'}
+        //     ]);
+        //     return;
+        // }
         // signIn(foundUser);
     }
 
     return (
       <View style={styles.container}>
-          <StatusBar backgroundColor='#009387' barStyle="light-content"/>
+          {/* <StatusBar backgroundColor='#009387' barStyle="light-content"/> */}
         <View style={styles.header}>
             <Text style={styles.text_header}>Welcome!</Text>
         </View>
@@ -252,7 +270,7 @@ export default SignInScreen;
 const styles = StyleSheet.create({
     container: {
       flex: 1, 
-      backgroundColor: '#009387'
+      backgroundColor: 'darkseagreen'
     },
     header: {
         flex: 1,

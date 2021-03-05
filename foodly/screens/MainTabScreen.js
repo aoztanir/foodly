@@ -95,7 +95,7 @@ export default MainTabScreen;
 const ProfileStackScreen = ({navigation})=> (
   <ProfileStack.Navigator screenOptions={{
     headerStyle:{
-      backgroundColor: '#009387',
+      backgroundColor: 'darkseagreen',
 
     },
     headerTintColor: '#fff',
@@ -107,7 +107,7 @@ const ProfileStackScreen = ({navigation})=> (
       title: 'Profile',
       headerLeft: () => (
         <Icon.Button name="ios-menu" size = {25}
-        backgroundColor="#009387" onPress = {() => {navigation.openDrawer()}}></Icon.Button>
+        backgroundColor="darkseagreen" onPress = {() => {navigation.openDrawer()}}></Icon.Button>
       )
     }} />
   </ProfileStack.Navigator>
@@ -120,7 +120,7 @@ const ProfileStackScreen = ({navigation})=> (
 const HomeStackScreen = ({navigation})=> (
     <HomeStack.Navigator screenOptions={{
       headerStyle:{
-        backgroundColor: '#009387',
+        backgroundColor: 'darkseagreen',
   
       },
       headerTintColor: '#fff',
@@ -132,7 +132,7 @@ const HomeStackScreen = ({navigation})=> (
         title: 'Home',
         headerLeft: () => (
           <Icon.Button name="ios-menu" size = {25}
-          backgroundColor="#009387" onPress = {() => {navigation.openDrawer()}}></Icon.Button>
+          backgroundColor="darkseagreen" onPress = {() => {navigation.openDrawer()}}></Icon.Button>
         )
       }} />
     </HomeStack.Navigator>
@@ -143,7 +143,7 @@ const HomeStackScreen = ({navigation})=> (
   const ExploreStackScreen = ({navigation})=> (
     <ExploreStack.Navigator screenOptions={{
       headerStyle:{
-        backgroundColor: '#009387',
+        backgroundColor: 'darkseagreen',
   
       },
       headerTintColor: '#fff',
@@ -151,11 +151,11 @@ const HomeStackScreen = ({navigation})=> (
         fontWeight: 'bold'
       }
     }}>
-      <ExploreStack.Screen name="home" component = {HomeScreen} options = {{
+      <ExploreStack.Screen name="home" component = {ExploreScreen} options = {{
         title: 'Explore',
         headerLeft: () => (
           <Icon.Button name="ios-menu" size = {25}
-          backgroundColor="#009387" onPress = {() => {navigation.openDrawer()}}></Icon.Button>
+          backgroundColor="darkseagreen" onPress = {() => {navigation.openDrawer()}}></Icon.Button>
         )
       }} />
     </ExploreStack.Navigator>
@@ -165,7 +165,7 @@ const HomeStackScreen = ({navigation})=> (
   const PostStackScreen = ({navigation})=> (
     <PostStack.Navigator screenOptions={{
       headerStyle:{
-        backgroundColor: '#009387',
+        backgroundColor: 'darkseagreen',
   
       },
       headerTintColor: '#fff',
@@ -177,7 +177,7 @@ const HomeStackScreen = ({navigation})=> (
         title: 'Post',
         headerLeft: () => (
           <Icon.Button name="ios-menu" size = {25}
-          backgroundColor="#009387" onPress = {() => {navigation.openDrawer()}}></Icon.Button>
+          backgroundColor="darkseagreen" onPress = {() => {navigation.openDrawer()}}></Icon.Button>
         )
       }} />
     </PostStack.Navigator>

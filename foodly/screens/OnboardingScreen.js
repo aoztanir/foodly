@@ -29,7 +29,7 @@ const SplashScreen = ({navigation}) => {
             <Animatable.Image 
                 animation="bounceIn"
                 duraton="1500"
-            source={require('./icon.png')}
+            source={require('../assets/icon.png')}
             style={styles.logo}
             resizeMode="stretch"
             />
@@ -78,7 +78,7 @@ const height_logo = height * 0.28;
 const styles = StyleSheet.create({
   container: {
     flex: 1, 
-    backgroundColor: '#009387'
+    backgroundColor: 'darkseagreen'
   },
   appButtonContainer: {
     

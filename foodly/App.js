@@ -107,15 +107,20 @@ export default function App() {
       let userToken;
       userToken = null;
       userToken = 'DFGDS';
+      console.log('hi')
       if (userName=='user' && password =='password'){
+        console.log('hi')
+        console.log(userName);
+        console.log(password);
         try {
           await AsyncStorage.setItem('userToken', userToken);
+          dispatch({type: 'LOGIN', id: userName, token: userToken});
         } catch(e){
           console.log(e);
         }
         
       }
-      dispatch({type: 'LOGIN', id: userName, token: userToken});
+      
       
     },
     signOut: async() => {
